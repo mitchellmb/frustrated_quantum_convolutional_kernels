@@ -1,8 +1,9 @@
 import torch
 import cudaq
+from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
-from src.utils.data_utils import convert_to_greyscale, normalize_greyscale, extract_patches
+from src.utils.data_utils.image_preparations import convert_to_greyscale, normalize_greyscale, extract_patches
 
 
 def run_quantum_kernel_filter(img: torch.Tensor,
@@ -49,8 +50,9 @@ def run_quantum_kernel_filter(img: torch.Tensor,
     return feature_map
 
 
-def show_images_grid(images, rows, cols, font_size=8):
-    fig, axs = plt.subplots(rows, cols, figsize=(cols * 2, rows * 2))
+def show_images_grid(images, rows, cols, save_path, font_size=8, high_dpi=300, low_dpi=50):
+    # Create figure and plot with high DPI for saving
+    fig, axs = plt.subplots(rows, cols, figsize=(cols * 2, rows * 2), dpi=high_dpi)
     axs = axs.flatten()
 
     for i, ax in enumerate(axs):
@@ -61,10 +63,19 @@ def show_images_grid(images, rows, cols, font_size=8):
             text = f'$J_1$ = {np.round(images[i][0], 3)}\n $J_2$ = {np.round(images[i][1], 3)}\n $B$ = {np.round(images[i][2], 3)}'
             if len(images[i]) > 4:
                 text = f'samples = {images[i][3]}\n ' + text
-            ax.text(0.95, 0.80, text, fontsize=font_size, ha='right', va='bottom', transform=ax.transAxes, bbox=dict(facecolor='white', alpha=0.95, boxstyle='round,pad=0.2'))
-
+            ax.text(0.95, 0.80, text, fontsize=font_size, ha='right', va='bottom', transform=ax.transAxes, 
+                    bbox=dict(facecolor='white', alpha=0.95, boxstyle='round,pad=0.2'))
         else:
             ax.axis('off')
 
     plt.tight_layout()
-    plt.show()
+    
+    # Save the high-DPI figure to disk
+    plt.savefig(save_path, dpi=high_dpi)
+    plt.close(fig)
+
+    # Reload the saved image with low DPI for display in Jupyter notebook
+    img = Image.open(save_path)
+    img = img.convert('RGB')
+    img.thumbnail((img.width // 2, img.height // 2))
+    img.show()
