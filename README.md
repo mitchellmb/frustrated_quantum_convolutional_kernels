@@ -52,14 +52,13 @@ ImageCLEF 2013 plant task dataset.
 
 
 ## Citation
-If you use this software or idea in your research, please cite it as follows:
+If you use this software or idea in your research, please cite it with the link on the side of the project or as follows:
 
-**BibTeX:**
 ```bibtex
-@misc{mbordelon2025,
-  author = {Mitchell Bordelon},
-  title = {Frustrated quantum convolutional kernels},
-  year = {2025},
-  url = {https://github.com/mitchellmb/frustrated_quantum_convolutional_kernels},
-  note = {Accessed: YYYY-MM-DD}
+@software{Mitchell_Bordelon_Frustrated_quantum_convolutional,
+    author = {{Mitchell Bordelon}},
+    license = {MIT},
+    title = {{Frustrated quantum convolutional kernels}},
+    url = {https://github.com/mitchellmb/frustrated_quantum_convolutional_kernels},
+    version = {master}
 }
