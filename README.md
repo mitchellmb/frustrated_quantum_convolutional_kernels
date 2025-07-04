@@ -27,3 +27,4 @@ The notebook in this project use images from the `hqnn_image_classification` pro
 
 ## Future outlook
 The design principles of these frustrated quantum kernels can be easily adapted to other general quantum algorithm tasks, not just image classifications, as long as the underlying quantum circuit is pre-placed in the Hilbert space proximate to **one-or-more phase boundaries**.
+

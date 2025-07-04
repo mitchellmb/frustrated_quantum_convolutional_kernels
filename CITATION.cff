@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software or idea in your research, please cite it as follows."
+doi: ""
+url: https://github.com/mitchellmb/frustrated_quantum_convolutional_kernels
+authors:
+  - name: Mitchell Bordelon
+    orcid: "https://orcid.org/0000-0001-5611-5315" 
+    google-scholar: "https://scholar.google.com/citations?user=KDPQS90AAAAJ&hl=en&oi=ao"
+title: "Frustrated quantum convolutional kernels"
+year: 2025
+version: "master"
+license: MIT
