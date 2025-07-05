@@ -6,7 +6,11 @@ The goal of this project is to utilize concepts from condensed matter physics, s
 
 The overall idea is to pre-place a quantum kernel proximate to multiple quantum phase boundaries, and then let minor perturbations from data inputs to swap between neighboring competitive phases. These phase crossings are then the initiation point for learning in the follow-up machine learning task.
 
-As an initial test, this project focuses on image augmentation and convolutions to extract classical image features by adapting the principles behind the `Frustrated J1-J2 square-lattice Hamiltonian` to convolutional kernels.
+As an initial test, this project focuses on image augmentation and convolutions to extract classical image features by adapting the principles behind the `Frustrated J1-J2 square-lattice Hamiltonian` to convolutional kernels. Competition between $J_1$, $J_2$, $B$ (external magnetic field), and the number of samples taken is the source of frustration.
+
+
+
+![frustrated_lattice_diagram](https://github.com/user-attachments/assets/72f6bc51-50da-45a6-9403-04c307f09d8f)
 
 
 ## Objective
