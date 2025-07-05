@@ -4,7 +4,7 @@ One of the potential benefits of quantum machine learning (QML) is the ability t
 
 The goal of this project is to utilize concepts from condensed matter physics, specifically **magnetic frustration**, as a naive conceptual guide to circumvent this pitfall and create expressive quantum circuits and algorithms. An introduction to magnetic frustration can be found here: [https://www.nature.com/articles/nature08917].
 
-The overall idea is to pre-place a quantum kernel proximate to multiple quantum phase boundaries, and then let minor perturbations from data inputs to swap between neighboring competitive phases. These phase crossings are then the initiation point for learning in the follow-up machine learning task.
+The overall idea is to pre-place a quantum kernel proximate to multiple quantum phase boundaries, and then let minor perturbations from data inputs to swap between neighboring competitive phases (i.e., bitstrings). These phase crossings are then the initiation point for learning in the follow-up machine learning task.
 
 
 ## Objective
