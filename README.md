@@ -4,7 +4,7 @@ One of the potential benefits of quantum machine learning (QML) is the ability t
 
 The goal of this project is to utilize concepts from condensed matter physics, specifically **magnetic frustration**, as a naive conceptual guide to circumvent this pitfall and create expressive quantum circuits and algorithms. An introduction to magnetic frustration can be found here: [https://www.nature.com/articles/nature08917].
 
-The overall idea is to pre-place a quantum kernel proximate to multiple quantum phase boundaries, and then let minor perturbations from data inputs to swap between neighboring competitive phases (i.e., bitstrings). These phase crossings are then the initiation point for learning in the follow-up machine learning task.
+The overall idea is to pre-place a quantum kernel proximate to multiple quantum phase boundaries, and then let minor perturbations from data inputs to swap between neighboring competitive phases (i.e., bitstrings) on measurement. These phase crossings are then the initiation point for learning in the follow-up machine learning task.
 
 
 ## Objective
@@ -45,7 +45,7 @@ As an initial test, this project focuses on image augmentation and convolutions 
     - E.g., could be naturally used in generic `quantum kernel methods` (reference: [https://www.nature.com/articles/s41467-024-49287-w])
 3) Individual frustrated kernels can combine to increase quantum entanglement of the data or problem, but will require more qubits & circuit depth.
     - By doing so, an initial **product-state-like** system becomes a **fully entangled quantum state** that cannot be decomposed back into a product state.
-    - This additional entanglement enhances the **quantum representation** of the encoded data, potentially revealing new **quantum-only features**.
+    - This additional entanglement enhances the **quantum representation** of the encoded data, potentially revealing new **quantum-only features** that a typical CNN convolutional layer cannot capture.
     - I.e., frustrated kernels are product-like building blocks that, when entangled together, evolve into a fully quantum state with richer, more complex data representations.
     - Creates a simple way to scale frustrated kernels as the NISQ era progresses.
 
