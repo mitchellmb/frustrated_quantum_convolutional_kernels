@@ -1,4 +1,4 @@
-# Magnetic frustration as a guide to quantum algorithm design
+# Magnetic frustration as a guide to quantum kernel design
 
 One of the potential benefits of quantum machine learning (QML) is the ability to leverage the exponentially large Hilbert space of quantum systems to represent and learn complex patterns from data that may be classically intractable. However, QML algorithms can also suffer from **barren plateaus** (regions in the optimization landscape wherein the gradient vanishes), making learning and training extremely difficult and heavily dependent on parameter initialization. 
 
