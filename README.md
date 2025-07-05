@@ -17,7 +17,7 @@ As an initial test, this project focuses on image augmentation and convolutions 
 ![frustrated_lattice_diagram](https://github.com/user-attachments/assets/72f6bc51-50da-45a6-9403-04c307f09d8f)
 
 ## Methodology
-- Design a series of quantum kernels (coded in `CUDA-Q`) with varying entanglements & controlled-rotation operations that **mimic** frustration parameters.
+- Design a series of quantum kernels (coded in **CUDA-Q**) with varying entanglements & controlled-rotation operations that **mimic** frustration parameters.
 - Inputs: image pixel patches (2x2, 3x3, and eventually larger)
 - Kernel: sweeps across image patches via *stride* to convert image features to `magnetic textures` and `magnetic phase boundaries / domain walls` to improve an image classification task
 - Output: in early NISQ, the varying kernels can be used as image **augmentations**, with the longer-term goals of:
