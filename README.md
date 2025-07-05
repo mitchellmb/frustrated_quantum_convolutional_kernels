@@ -4,7 +4,7 @@ One of the potential benefits of quantum machine learning (QML) is the ability t
 
 The goal of this project is to utilize concepts from condensed matter physics, specifically **magnetic frustration**, as a naive conceptual guide to circumvent this pitfall and create expressive quantum circuits and algorithms. 
 
-The overall idea is to pre-place a quantum kernel proximate to multiple quantum phase boundaries, and then let minor perturbations from data inputs to swap between neighboring phases. These phase crossings are then the fundamental source of learning in the follow-up machine learning task.
+The overall idea is to pre-place a quantum kernel proximate to multiple quantum phase boundaries, and then let minor perturbations from data inputs to swap between neighboring competitive phases. These phase crossings are then the initiation point for learning in the follow-up machine learning task.
 
 As an initial test, this project focuses on image augmentation and convolutions to extract classical image features by adapting the principles behind the `Frustrated J1-J2 square-lattice Hamiltonian` to convolutional kernels.
 
@@ -13,7 +13,7 @@ As an initial test, this project focuses on image augmentation and convolutions 
 Create `frustrated quantum kernels` with **limited qubits and circuit depth** that convolve an image to detect features as a typical classical CNN convolutional layer would, but with parameters conceptually defined via the magnetically-frustrated Hamiltonian.
 
 ## Methodology
-- Design a series of quantum kernels with varying entanglements & controlled-rotation operations that **mimic** frustration parameters.
+- Design a series of quantum kernels (coded in `CUDA-Q`) with varying entanglements & controlled-rotation operations that **mimic** frustration parameters.
 - Inputs: image pixel patches (2x2, 3x3, and eventually larger)
 - Kernel: sweeps across image patches via *stride* to convert image features to `magnetic textures` and `magnetic phase boundaries / domain walls` to improve an image classification task
 - Output: in early NISQ, the varying kernels can be used as image **augmentations**, with the longer-term goals of:
